@@ -1,4 +1,4 @@
-# Stocks'n News
+# Bouncing Balls
 
 Click on the screen -> see balls bouncing around -> profit.
 
