@@ -9,7 +9,7 @@ class Ball {
     constructor(x, y, canvas) {
 		this.canvas = canvas;
 		this.ctx = this.canvas.getContext('2d');
-    	this.coordinate = new Coordinate(x, y);
+		this.coordinate = new Coordinate(x, y);
 		this.velocityX = getRandomNumberInRange(5, 15);
 		this.velocityY = getRandomNumberInRange(15, 25);
 		this.radius = 2;
@@ -21,9 +21,9 @@ class Ball {
 		this.ctx.beginPath();
 		this.ctx.fillStyle = this.colour;
 		this.ctx.strokeStyle = this.colour;
-	    this.ctx.arc(this.coordinate.x, this.coordinate.y, this.radius, 0, Math.PI*2, true);
-	    this.ctx.closePath();
-	    this.ctx.fill();
+		this.ctx.arc(this.coordinate.x, this.coordinate.y, this.radius, 0, Math.PI*2, true);
+		this.ctx.closePath();
+		this.ctx.fill();
 	}
 
 	paintTrajectoryLine(startCoordinates) {
@@ -92,9 +92,9 @@ class Ball {
 		ball.ctx.beginPath();
 		ball.ctx.moveTo(ball.coordinate.x, ball.coordinate.y);
 		ball.ctx.fillStyle = 'white';
-	    ball.ctx.arc(ball.coordinate.x, ball.coordinate.y, ball.radius+1, 0, Math.PI*2, true);
-	    ball.ctx.closePath();
-	    ball.ctx.fill();
+		ball.ctx.arc(ball.coordinate.x, ball.coordinate.y, ball.radius+1, 0, Math.PI*2, true);
+		ball.ctx.closePath();
+		ball.ctx.fill();
 	}
 
 	get previousCoordinates() {
