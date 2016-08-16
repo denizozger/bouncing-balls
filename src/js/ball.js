@@ -6,14 +6,14 @@
  */
 
 class Ball {
-    constructor(x, y, canvas) {
+	constructor(x, y, canvas) {
 		this.canvas = canvas;
 		this.ctx = this.canvas.getContext('2d');
 		this.coordinate = new Coordinate(x, y);
 		this.velocityX = getRandomNumberInRange(5, 15);
 		this.velocityY = getRandomNumberInRange(15, 25);
 		this.radius = 2;
-		let randomColour = new RColor().get();
+		const randomColour = new RColor().get();
 		this.colour = `rgb(${randomColour[0]}, ${randomColour[1]}, ${randomColour[2]})`;
 	}
 
@@ -48,11 +48,11 @@ class Ball {
 		this.velocityY = this.velocityY * -1;
 
 		// move the ball back to screen boundaries in y direction
-		let yOffset = Math.abs(canvas.height - this.coordinate.y);
+		const yOffset = Math.abs(canvas.height - this.coordinate.y);
 
 		// adjust the ball's position in x direction based on y adjustment amount
-		let yOffsetRatio = yOffset / this.velocityY;
-		let xOffset = this.velocityX * yOffsetRatio;
+		const yOffsetRatio = yOffset / this.velocityY;
+		const xOffset = this.velocityX * yOffsetRatio;
 
 		return new Coordinate(this.coordinate.x - xOffset, this.coordinate.y - yOffset);
 	}
@@ -63,8 +63,8 @@ class Ball {
 			throw new OutOfBoundariesException(this);
 		}
 
-		let bounceThisTick = this.coordinate.y > canvas.height;
-		let initialCoordinate = new Coordinate(this.coordinate.x, this.coordinate.y);
+		const bounceThisTick = this.coordinate.y > canvas.height;
+		const initialCoordinate = new Coordinate(this.coordinate.x, this.coordinate.y);
 		let newCoordinates;
 
 		if (!bounceThisTick) {
