@@ -4,7 +4,7 @@ Click on the screen -> see balls bouncing around -> profit.
 
 ![Screen recording](https://github.com/denizozger/bouncing-balls/raw/master/recording.gif)
 
-Built with Node instead of a static page primarily to use Babel.js.
+Built with Node instead of a static page primarily to use [Babel.js](https://babeljs.io/).
 
 ## Running Locally
 
