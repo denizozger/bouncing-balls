@@ -11,7 +11,7 @@ app.use(serve('.'));
 
 if (!module.parent) {
 	app.listen(port);
-	console.log(`Bouncing balls listening on ${post}`);
+	console.log(`Bouncing balls listening on ${port}`);
 }
 
 app.on('error', (err, ctx) => log.error('Server error', err, ctx));
